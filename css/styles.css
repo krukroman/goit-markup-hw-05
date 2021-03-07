@@ -447,11 +447,13 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products-list-thumb {
   position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 .products-list-img {
   display: block;
@@ -465,13 +467,14 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products-list-description-container {
   padding: 20px 24px;
@@ -501,7 +504,7 @@ body {
 }
 .products-list-link:hover .products-list-overlay,
 .products-list-link:focus .products-list-overlay {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Підвал */
