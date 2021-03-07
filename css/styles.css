@@ -110,7 +110,7 @@ body {
 .header-contacts-link {
   display: flex;
   align-items: center;
-  padding: 32px 0;
+  padding: 31px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -592,15 +592,18 @@ body {
 .footer-socials-list-link:focus {
   background: var(--accent-color);
 }
+/* Бекдроп */
 .backdrop {
   position: fixed;
-  pointer-events: none;
-  opacity: 0;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 .modal {
   position: absolute;
@@ -618,4 +621,16 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--main-bg-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.close-modal-button-icon {
+  display: block;
+}
+.close-modal-button:focus,
+.close-modal-button:hover {
+  fill: var(--accent-color);
 }
