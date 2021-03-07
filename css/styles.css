@@ -52,11 +52,15 @@ body {
   margin: 0;
   padding: 0;
 }
+/* .navigation-list-item {
+  position: relative;
+} */
 .navigation-list-item + .navigation-list-item {
   margin-left: 50px;
 }
 
 .navigation-list-link {
+  position: relative;
   display: block;
   padding: 32px 0;
   font-weight: 500;
@@ -66,9 +70,27 @@ body {
   text-decoration: none;
   color: inherit;
 }
+.navigation-list-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-image: url(../images/icons/hover.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
 .navigation-list-link:hover,
-.navigation-list-link:focus {
+.navigation-list-link:focus,
+.navigation-list-link:hover::after,
+.navigation-list-link:focus::after {
   color: var(--accent-color);
+  opacity: 1;
 }
 .navigation-list-link.current {
   color: var(--accent-color);
@@ -239,10 +261,29 @@ body {
   margin: var(--grid-list-item-margin);
   max-width: calc(100% / 3 - (2 * var(--grid-list-item-margin)));
 }
+.what-we-do-thumb {
+  position: relative;
+}
 .what-we-do-img {
   display: block;
   max-width: 100%;
   align-self: center;
+}
+.what-we-do-description {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 27px 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+  background: rgba(47, 48, 58, 0.8);
 }
 /* Секція-Наша команда */
 .section.section-our-team {
