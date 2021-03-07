@@ -52,15 +52,14 @@ body {
   margin: 0;
   padding: 0;
 }
-/* .navigation-list-item {
+.navigation-list-item {
   position: relative;
-} */
+}
 .navigation-list-item + .navigation-list-item {
   margin-left: 50px;
 }
 
 .navigation-list-link {
-  position: relative;
   display: block;
   padding: 32px 0;
   font-weight: 500;
@@ -92,8 +91,10 @@ body {
   color: var(--accent-color);
   opacity: 1;
 }
-.navigation-list-link.current {
+.navigation-list-link.current,
+.navigation-list-link.current::after {
   color: var(--accent-color);
+  opacity: 1;
 }
 .header-contacts-list {
   list-style: none;
@@ -447,15 +448,30 @@ body {
   text-decoration: none;
   color: inherit;
 }
-.products-list-link:hover,
-.products-list-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.products-list-thumb {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .products-list-img {
   display: block;
   align-items: center;
   max-width: 100%;
+}
+.products-list-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
 }
 .products-list-description-container {
   padding: 20px 24px;
@@ -476,6 +492,16 @@ body {
   line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+
+.products-list-link:hover,
+.products-list-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.products-list-link:hover .products-list-overlay,
+.products-list-link:focus .products-list-overlay {
+  opacity: 1;
 }
 
 /* Підвал */
