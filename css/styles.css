@@ -176,6 +176,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-bg-color);
+  outline: transparent;
   border: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -414,6 +415,7 @@ body {
   background: #f5f4fa;
   color: inherit;
   border: transparent;
+  outline: transparent;
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
@@ -625,6 +627,7 @@ body {
   cursor: pointer;
   background-color: var(--main-bg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: transparent;
   border-radius: 50%;
 }
 .close-modal-button-icon {
