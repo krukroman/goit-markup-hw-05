@@ -473,8 +473,10 @@ body {
   letter-spacing: 0.03em;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products-list-description-container {
   padding: 20px 24px;
@@ -504,6 +506,7 @@ body {
 }
 .products-list-link:hover .products-list-overlay,
 .products-list-link:focus .products-list-overlay {
+  opacity: 1;
   transform: translateY(0);
 }
 
